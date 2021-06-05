@@ -1,0 +1,8 @@
+{
+  "name": "Example Service",
+  "version": "1.0.0",
+  "description": "Document Service Local",
+  "title": "Local APP",
+  "url": "http://localhost:8888/",
+  "order": []
+}

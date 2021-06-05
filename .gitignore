@@ -1,0 +1,40 @@
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+*.swp
+.env
+
+/uploads
+pids
+logs
+results
+tmp
+build
+
+#Build
+
+# Dependency directory
+node_modules
+bower_components
+
+# Editors
+.idea
+*.iml
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Ignore built ts files
+dist/**/*
+
+# Test temp
+.nyc_output
+
+private/**/*
+.vscode
+
