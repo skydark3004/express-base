@@ -32,5 +32,5 @@ const envConfig: AppEnvironment = {
     API_RESTRICT: {
         CLIENT_SECRET: process.env.SYSTEM_SECRET_KEY
     }
-}
+};
 export default envConfig;

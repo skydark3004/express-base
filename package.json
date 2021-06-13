@@ -9,7 +9,7 @@
     "build:develop": "gulp build:develop",
     "build:production": "gulp build:production",
     "start": "NODE_ENV=local nodemon --watch 'src/**/*.ts' --ignore 'src/**/*.spec.ts' --exec 'ts-node' src/index.ts",
-    "start:window": "NODE_ENV=local nodemon --watch 'src/**/*.ts' --ignore 'src/**/*.spec.ts' --exec src/index.ts",
+    "start:window": "set NODE_ENV=local && nodemon --watch 'src/**/*.ts' --ignore 'src/**/*.spec.ts' --exec ts-node src/index.ts",
     "local": "gulp build:local  && (tsc -w & nodemon dist/index.js local)",
     "start:staging": "NODE_ENV=staging node dist/index.js",
     "start:production": "NODE_ENV=production node dist/index.js",
