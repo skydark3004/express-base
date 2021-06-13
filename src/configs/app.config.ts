@@ -25,7 +25,7 @@ function setupEnv(): AppEnvironment {
   }
   process.env.SYSTEM_SECRET_KEY = fs.readFileSync(pathSecret).toString().trim();
   process.env.SYSTEM_SECRET_JWT = fs.readFileSync(pathJwtSecret).toString().trim();
-  return require('./environment').default;
+  return require('./environment.config').default;
 }
 
 ENV = setupEnv();

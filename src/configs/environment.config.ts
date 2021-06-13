@@ -1,8 +1,8 @@
 import * as path from 'path';
-import { AppEnvironment } from './../../common/interfaces';
+import { AppEnvironment } from '../common/interfaces';
 import * as dotenv from 'dotenv';
 
-const ROOT = path.normalize(__dirname + '/../..');
+const ROOT = path.normalize(__dirname + '/..');
 dotenv.config({ path: `${ROOT}/configs/environment/.env` });
 const envConfig: AppEnvironment = {
     NAME: process.env.NAME || 'service',
