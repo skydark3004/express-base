@@ -20,4 +20,5 @@ router.delete('/template-controller/:id', ctrl.deleteObjById, {
 router.patch('/template-controller/:id/change-status-active', ctrl.changeStatusActive, {
   roles: Object.values(AppConst.ADMIN_ROLES)
 });
-export default 'templates-examples';
+
+export = router;

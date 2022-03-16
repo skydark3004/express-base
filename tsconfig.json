@@ -12,7 +12,8 @@
         "node_modules/*",
         "src/libs/types/*"
       ]
-    }
+    },
+    "allowSyntheticDefaultImports": true,
   },
   "include": [
     "src/**/*",

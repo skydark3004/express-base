@@ -22,6 +22,7 @@ export async function create(_requestParams: ICreateTemplateExampleRequest) {
   if (!created) throw new BaseError({ message: TemplateExampleConst.RESPONSE_ERRORS.ERROR_TEMPLATE_EXAMPLE_CREATE_HAS_ERROR });
   return created;
 }
+
 export async function update(_id: string, _requestParams: IUpdateTemplateExampleRequest) {
   const find = await repositories.findById(_id);
   if (!find) throw new BaseError({ message: TemplateExampleConst.RESPONSE_ERRORS.ERROR_TEMPLATE_EXAMPLE_NOT_FOUND });

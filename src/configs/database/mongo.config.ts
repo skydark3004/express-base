@@ -27,6 +27,7 @@ function connectDb(callback?: Function) {
   let isConnectedBefore = false;
   const uri = `mongodb://${APP_CONFIG.ENV.DATABASE.MONGODB.HOST}:${APP_CONFIG.ENV.DATABASE.MONGODB.PORT}/`
     + `${APP_CONFIG.ENV.DATABASE.MONGODB.NAME}`;
+    console.log(uri);
   const connectionOptions: mongoose.ConnectionOptions = {
     useNewUrlParser: true,
     useFindAndModify: false,

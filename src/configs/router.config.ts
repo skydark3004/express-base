@@ -9,6 +9,14 @@ import APP_CONFIG from './app.config';
 import { AppConst } from '../common/constants/app.const';
 import { setLanguage, removeLanguage } from '../common/constants';
 
+//import folderRoutes = require('../routes/folderRoutes');
+//import itemRoutes = require('../routes/itemRoutes');
+import itemRoutes = require('../api/item-api/item.routes');
+import folderRoutes = require('../api/folder-api/folder.routes');
+
+
+
+
 
 /**
  * @method registerRoutes
@@ -19,9 +27,19 @@ export default function (app: express.Express) {
   const routes = glob.sync(path.normalize(APP_CONFIG.ROOT + `/api/**/*.route.{ts,js}`));
   const routesAdmin = glob.sync(path.normalize(APP_CONFIG.ROOT + `/api-admin/**/*.route.{ts,js}`));
   // basic router ******
+  app.use('/api/folder', folderRoutes);
+  app.use('/api/item', itemRoutes);
+  //app.use('/api/example', example);
+
+
+
   app.use('/apidocs', (req, res, next) => {
     express.static(path.join(__dirname, '../public'))(req, res, next);
   });
+
+  
+
+
   app.use((req: any, res: any, next: any) => {
     if (req.query.lang) setLanguage(req);
     else removeLanguage();
